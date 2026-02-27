@@ -1,45 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import imgPessoa from './assets/pessoa.png'
+import iconeGithub from './assets/github.png'
+import iconeLinkedin from './assets/linkedin.png'
 
-import {
-  collection,
-  addDoc,
-  getDocs,
-  deleteDoc,
-  updateDoc,
-  doc
-} from 'firebase/firestore';
 
-import { db } from './firebaseConfig';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+    <main>
+      <section>
+      <p>Olá, seja bem-vindo ao meu portfólio</p>
+
+      <p>Meu nome é <span>Richard</span> e eu sou um desenvolverdor Web</p>
+
+      <div className='redesSociais'>
+        <a href='#'>
+          <img src={iconeGithub}/>
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href='#'>
+          <img src={iconeLinkedin}/>
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+
+      <a href='#sobreMim'>
+        <button>
+          Conheça mais sobre mim
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      </a>
+
+      </section>
+
+      <section>
+        <img className='imagemDev' src={imgPessoa}/>
+      </section>
+
+    </main>
   )
 }
 

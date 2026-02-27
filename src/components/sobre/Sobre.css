@@ -1,0 +1,69 @@
+#sobreMim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 50px;
+    height: 100vh;
+    gap: 50px;
+    border-block: 3px solid rgba(0,0,0,0.200) ;
+}
+
+.resumo {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    gap: 20px;
+}
+
+.resumo h2{
+    font-size: 4rem;
+    color: blueviolet;
+}
+
+.resumo p {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.meusConhecimentos h2 {
+    font-size: 3.5rem;
+    color: blueviolet;
+}
+
+.meusConhecimentos ul {
+    list-style: none;
+    font-size: 1,5rem;
+}
+
+@media screen and (max-width: 1000px) {
+    main section:nth-child(1) {
+      width: 100%;
+    }
+  
+    section p:nth-child(1) {
+      font-size: 1.5rem;
+    }
+  
+    section p:nth-child(2) {
+      font-size: 3rem;
+    }
+  }
+  
+  @media screen and (max-width: 805px) {
+    main {
+      flex-direction: column;
+    }
+  
+    .redes-sociais {
+      margin-block: 10px;
+    }
+  
+    .imagemDev {
+      display: none;
+    }
+  
+    main section:nth-child(1) button {
+      font-size: 20px;
+      padding: 10px 26px;
+    }
+  }
